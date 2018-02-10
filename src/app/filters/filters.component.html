@@ -1,0 +1,133 @@
+<p>
+  filters works! Let's add some filters for my Perimeter:
+</p>
+
+<div class="inline">
+	<label>voctype</label><br>
+	<button class="btn btn-default" type="button" (click)="getVocSales()">Dealer sales</button>
+	<button class="btn btn-default" type="button" (click)="getVocAfterSales()">Dealer after-sales</button>
+</div>
+
+<br><br><br>
+
+<div class="inline">
+<label>country</label><br>
+<select (change)="onSelectCountry($event.target.value)"> <!--[(ngModel)]="selectedCountry.id"-->
+  <option value="0">--Select--</option>
+  <option *ngFor="let country of countries" value= {{country.id}}>{{country.name}}</option>
+</select>
+</div>
+
+<div class="inline">
+<label>region</label><br>
+<select (change)="onSelectRegion($event.target.value)">
+  <!--<option *ngIf='selectedCountry.id == 0' value="0">--Select--</option>-->
+  <option value="0">--Select--</option>
+  <option *ngFor="let region of regions " value= {{region.id}}>{{region.name}}</option>
+</select>
+</div>
+
+<div class="inline">
+<label>area</label><br>
+<select>
+  <option value="0">--Select--</option>
+  <option *ngFor="let area of areas " value= {{area.id}}>{{area.name}}</option>
+</select>
+</div>
+
+<br><br><br>
+
+<div class="inline">
+<label>pre-division</label><br>
+<select (change)="onSelectPredivision($event.target.value)">
+  <option value="0">--Select--</option>
+  <option *ngFor="let predivision of predivisions " value= {{predivision.id}}>{{predivision.name}}</option>
+</select>
+</div>
+
+<div class="inline">
+<label>dealer group</label><br>
+<select (change)="onSelectDealerGroup($event.target.value)">
+  <option value="0">--Select--</option>
+  <option *ngFor="let dealergroup of dealergroups " value= {{dealergroup.id}}>{{dealergroup.name}}</option>
+</select>
+</div>
+
+<div class="inline">
+<label>dealer</label><br>
+<select (change)="onSelectDealer($event.target.value)">
+  <option value="0">--Select--</option>
+  <option *ngFor="let dealer of dealers " value= {{dealer.id}}>{{dealer.name}}</option>
+</select>
+</div>
+
+<div class="inline">
+<label>outlet</label><br>
+<select>
+  <option value="0">--Select--</option>
+  <option *ngFor="let outlet of outlets " value= {{outlet.id}}>{{outlet.name}}</option>
+</select>
+</div>
+
+<br><br><br>
+
+<div class="inline">
+<label>brand</label><br>
+<select (change)="onSelectBrand($event.target.value)">
+  <option value="0">--Select--</option>
+  <option *ngFor="let brand of brands " value= {{brand.id}}>{{brand.name}}</option>
+</select>
+</div>
+
+<div class="inline">
+<label>model</label><br>
+<select (change)="onSelectModel($event.target.value)">
+  <option value="0">--Select--</option>
+  <option *ngFor="let model of models " value= {{model.id}}>{{model.name}}</option>
+</select>
+</div>
+
+<div class="inline">
+<label>engine</label><br>
+<select (change)="onSelectEngine($event.target.value)">
+  <option value="0">--Select--</option>
+  <option *ngFor="let engine of engines " value= {{engine.id}}>{{engine.name}}</option>
+</select>
+</div>
+
+<div class="inline">
+<label>equipment level</label><br>
+<select (change)="onSelectEquipmentLevel($event.target.value)">
+  <option value="0">--Select--</option>
+  <option *ngFor="let equipmentLevel of equipmentLevels " value= {{equipmentLevel.id}}>{{equipmentLevel.name}}</option>
+</select>
+</div>
+
+<div class="inline">
+<label>multimedia</label><br>
+<select>
+  <option value="0">--Select--</option>
+  <option *ngFor="let multimedia of multimedias " value= {{multimedia.id}}>{{multimedia.name}}</option>
+</select>
+</div>
+
+<br><br><br>
+
+<div class="inline">
+<label>start date</label><br>
+<button class="btn btn-default" type="button">< month year ></button>
+</div>
+
+<div class="inline">
+<label>end date</label><br>
+<button class="btn btn-default" type="button">< month year ></button>
+</div>
+
+<div class="inline">
+<label>time pace</label><br>
+<button class="btn btn-default" type="button">Month</button>
+<button class="btn btn-default" type="button">Quarter</button>
+<button class="btn btn-default" type="button">Four-month period</button>
+</div>
+
+<br class="clearBoth" />

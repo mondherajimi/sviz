@@ -1,0 +1,27 @@
+<p>
+  home works!
+</p>
+<h1>{{title}}</h1>
+<h1>Hello {{currentUser.firstName}}</h1>
+<nav>
+  <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+  <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
+
+<div>
+    Menu Gauche
+</div>
+<div>
+    header
+</div>
+<div>
+    content
+</div>
+<div>
+    <a routerLink="/filters" routerLinkActive="active">Filters</a>
+</div>
+<br><br><br>
+<form name="form" (ngSubmit)="logout()">
+<button class="btn btn-primary">Logout</button>
+</form>

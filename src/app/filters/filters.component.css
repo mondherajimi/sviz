@@ -1,0 +1,10 @@
+/* Styles go here */
+
+select
+{
+  width:auto;
+}
+
+div.inline { float:left; margin-right: 10px;}
+label { font-family:Arial; font-size: 10px; text-transform: uppercase;}
+.clearBoth { clear:both; }
